@@ -202,11 +202,11 @@ public class TaskService {
                         || doneTask(player, ConstTask.TASK_32_2));
             case ConstNpc.VADOS:
                 return (doneTask(player, ConstTask.TASK_32_4));
-            case ConstNpc.THAN_MEO_KARIN:
+            case ConstNpc.THAN_MEO_KARIN:     
                 if (player.nPoint.dameg >= 12000) {
                     return (doneTask(player, ConstTask.TASK_25_0));
                 }
-            return false;
+                return (doneTask(player, ConstTask.TASK_9_2));
         }
         return false;
     }
@@ -943,25 +943,21 @@ public class TaskService {
                         + "Cháu bé hãy đi đánh mấy con %12 ở quanh đây thể hiện tài năng và ta sẽ coi như đó là học phí nhé");
                     break;
                 case ConstTask.TASK_9_1:
-                    npcSay(player, ConstTask.NPC_QUY_LAO,
-                            "Chào cậu bé, cháu có phải cháu nội ông %2 phải không?\n"
-                                    + "Ta cũng đã gặp cháu 1 lần hồi cháu còn bé xíu à\n"
-                                    + "Bây giờ cháu muốn ta nhận cháu làm đệ tử à? Ta cũng không biết thực lực của cháu hiện tại như nào nữa\n"
-                                    + "Cháu bé hãy đi đánh mấy con %12 ở quanh đây thể hiện tài năng và ta sẽ coi như đó là học phí nhé");
+                Service.gI().sendThongBao(player, "Mau leo lên tháp karin và nói chuyện với thần mèo nào");
                     break;
                 case ConstTask.TASK_9_2:
-                    npcSay(player, ConstTask.NPC_QUY_LAO,
-                            "Chào cậu bé, cháu có phải cháu nội ông %2 phải không?\n"
-                                    + "Ta cũng đã gặp cháu 1 lần hồi cháu còn bé xíu à\n"
-                                    + "Bây giờ cháu muốn ta nhận cháu làm đệ tử à? Ta cũng không biết thực lực của cháu hiện tại như nào nữa\n"
+                    npcSay(player, ConstNpc.THAN_MEO_KARIN,
+                            "Nhà con bị tên Tàu Bảy Bảy rượt đuổi nên mới chạy lên đây phải không?\n"
+                                    + "Giờ ta sẽ giúp đưa con về nhà nhé\n"
+                                    + "Hãy luyện tập thêm để tăng sức mạnh mới chiến đấu được với hắn ta\n"
                                     + "Cháu bé hãy đi đánh mấy con %12 ở quanh đây thể hiện tài năng và ta sẽ coi như đó là học phí nhé");
                     break;
                 case ConstTask.TASK_9_3:
-                    npcSay(player, ConstTask.NPC_QUY_LAO,
-                            "Chào cậu bé, cháu có phải cháu nội ông %2 phải không?\n"
-                                    + "Ta cũng đã gặp cháu 1 lần hồi cháu còn bé xíu à\n"
-                                    + "Bây giờ cháu muốn ta nhận cháu làm đệ tử à? Ta cũng không biết thực lực của cháu hiện tại như nào nữa\n"
-                                    + "Cháu bé hãy đi đánh mấy con %12 ở quanh đây thể hiện tài năng và ta sẽ coi như đó là học phí nhé");
+                    npcSay(player, ConstTask.NPC_NHA,
+                            "Hắn ta mạnh lắm phải không\n"
+                                    + "Con hãy luyện tập thêm nhé\n"
+                                    + "Hãy gặp người bạn của ta nhé\n"
+                                    + "");
                     break;
                 // --------------------------------------------------------------
                 case ConstTask.TASK_10_0:
